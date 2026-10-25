@@ -1,0 +1,297 @@
+/* --- PALETA DE COLORES (WARM IVORY / ESPRESSO / BLUSH NUDE) --- */
+:root {
+    --espresso: #221b19;       /* Banner superior e impresiones oscuras */
+    --walnut: #634B3D;         /* Títulos principales y acentos de texto */
+    --blush-nude: #D1A396;     /* Rosa nude cálido para destacados y bordes */
+    --oat-milk: #E6D7CD;       /* Fondo general cálido */
+    --warm-ivory: #d1c2ba;     /* Fondo de las tarjetas */
+    --text-dark: #231B19;      /* Texto de lectura de alto contraste */
+    --text-muted: #6B5B53;     /* Texto secundario */
+    --border-color: #D6C4B8;   /* Bordes y divisiones sutiles */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--oat-milk);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- BANNER DE PORTADA (SECCIÓN ESPRESSO) --- */
+.hero-banner {
+    background-color: var(--espresso);
+    color: var(--warm-ivory);
+    padding: 60px 20px;
+    border-bottom: 4px solid var(--blush-nude);
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text .subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--blush-nude);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.hero-text p {
+    color: var(--oat-milk);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--blush-nude);
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--walnut);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- CONTENEDOR EN 2 COLUMNAS --- */
+.layout-grid {
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--warm-ivory);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(43, 33, 30, 0.06);
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+/* Títulos de sección con línea en Blush Nude */
+h2.section-title {
+    color: var(--walnut);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--blush-nude);
+    border-radius: 2px;
+}
+
+/* Listas y detalles */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark);
+}
+
+.contact-list i {
+    color: var(--walnut);
+    width: 16px;
+}
+
+/* Habilidades */
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.progress-bg {
+    background-color: var(--oat-milk);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--blush-nude);
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Badges de Interés */
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.badge {
+    background-color: var(--oat-milk);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge i {
+    color: var(--walnut);
+}
+
+/* Pestañas (Tabs) */
+.tabs-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-size: 0.95rem;
+}
+
+.tab-btn.active {
+    color: var(--walnut);
+    border-bottom-color: var(--blush-nude);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Timeline */
+.timeline-item {
+    padding-left: 15px;
+    border-left: 2px solid var(--blush-nude);
+    margin-bottom: 20px;
+}
+
+.timeline-item h3 {
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.timeline-item .period {
+    font-size: 0.8rem;
+    color: var(--walnut);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: var(--oat-milk);
+    color: var(--text-dark);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--walnut);
+}
+
+.btn-submit {
+    background-color: var(--walnut);
+    color: var(--warm-ivory);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: var(--espresso);
+}
